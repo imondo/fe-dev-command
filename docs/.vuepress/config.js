@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/fe-dev-command/',
+  base: '/command/',
   title: 'fe-dev-command',
   description: '前端开发实践中所知的SSH命令',
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
