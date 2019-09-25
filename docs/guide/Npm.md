@@ -1,4 +1,4 @@
-## 如何发布自己模块包到NPM {docsify-ignore}
+# Npm
 
 ## 创建
 
