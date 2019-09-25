@@ -21,7 +21,9 @@ module.exports = {
           collapsable: false,
           children: [
             'Shell',
-            'Git'
+            'Git',
+            'Npm',
+            'PM2'
           ]
         }
       ]

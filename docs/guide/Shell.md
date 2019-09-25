@@ -122,6 +122,7 @@ opt/rabbitmq_server-3.6.6/sbin
 
 ```
 Jenkins
+
 service jenkins
 
 // 私服
@@ -158,9 +159,11 @@ pwd
 
 // 解压，压缩
 yum install lrzsz 安装
+
 rz上传文件  只可单个上传
+
 // 解压
-unzip iportal-fe-1.5.14.zip 
+unzip fe.zip 
 
 // 网络文件服务器（Network File System，简称NFS）
 /etc/init.d/nfs
@@ -169,10 +172,10 @@ unzip iportal-fe-1.5.14.zip
 /etc/init.d/nfs start
 
 谁连了我的NFS目录： showmount
-showmount -e 192.168.2.216
+showmount -e 192.168.2.26
 
 192.168.2.192
 vim /etc/fstab
 // 挂载
-mount -t nfs 192.168.2.216:/opt/nginx /opt/nginx2
+mount -t nfs 192.168.2.26:/opt/nginx /opt/nginx2
 ```
