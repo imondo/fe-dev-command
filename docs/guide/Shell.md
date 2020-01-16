@@ -25,6 +25,12 @@ find . -name '*.conf' -mmin -30
 ./nginx -s stop
 ./nginx -s reload
 /etc/init.d/nginx restart 
+
+// 查看所有端口
+netstat -ntlp
+
+// 给脚本权限
+chmod a+x test.sh
 ```
 
 
