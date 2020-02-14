@@ -32,4 +32,6 @@ pm2 delete 0                   # 删除指定应用 id 0
 pm2 startup                    # 创建开机自启动命令
 
 pm2 save                       # 保存当前应用列表
+
+pm2 restart start.json --max-memory-restart 20M # 内存达到20m重启
 ```
