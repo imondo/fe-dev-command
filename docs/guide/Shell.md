@@ -1,10 +1,20 @@
 # Shell
 
+## Linux
+
+```js
+// 将main1.c重命名为main.c
+rename main1.c main.c main1.c
+```
+
 ## nginx
 
 [find命令](https://www.cnblogs.com/hechunhua/p/4860544.html)
 
 ```
+// 搜索
+find / -name 'redis-server'（文件名或者目录名）
+
 // 查找nginx配置文件
 
 find / -name nginx.conf
@@ -31,6 +41,42 @@ netstat -ntlp
 
 // 给脚本权限
 chmod a+x test.sh
+
+// 查看用户
+ls -l （没有指定目录则为当前目录）
+
+// 进入用户
+su esearch（用户名）
+
+// 查看路径
+pwd
+
+// 解压，压缩安装lrzsz
+yum install lrzsz 
+
+// 上传文件  只可单个上传
+rz
+
+// 发送文件到本地
+sz file
+
+// 解压
+yum install unzip
+unzip fe.zip 
+
+// 网络文件服务器（Network File System，简称NFS）
+/etc/init.d/nfs
+/etc/init.d/nfs status
+/etc/init.d/nfs stop
+/etc/init.d/nfs start
+
+谁连了我的NFS目录： showmount
+showmount -e 192.168.2.26
+
+192.168.2.192
+vim /etc/fstab
+// 挂载
+mount -t nfs 192.168.2.26:/opt/nginx /opt/nginx2
 ```
 
 
@@ -139,49 +185,15 @@ usr/local/nexus/
 /sbin/iptables -I INPUT -p tcp --dport 6379 -j ACCEPT
 service iptables save
 
-// 搜索
-find / -name 'redis-server'（文件名或者目录名）
-
 // 安装screen
 yum install screen
 jar
 cd /opt/reader/
 java -jar reading/reading-authorization-starter-1.1.0-SNAPSHOT.jar
 
-// 查看用户
-ls -l （没有指定目录则为当前目录）
-
-// 进入用户
-su esearch（用户名）
-
 // 退出用户
 exit
 elasticsearch
 cd /opt/elasticsearch-5.6.1/bin/
 ./elasticsearch &
-
-// 查看路径
-pwd
-
-// 解压，压缩
-yum install lrzsz 安装
-
-rz上传文件  只可单个上传
-
-// 解压
-unzip fe.zip 
-
-// 网络文件服务器（Network File System，简称NFS）
-/etc/init.d/nfs
-/etc/init.d/nfs status
-/etc/init.d/nfs stop
-/etc/init.d/nfs start
-
-谁连了我的NFS目录： showmount
-showmount -e 192.168.2.26
-
-192.168.2.192
-vim /etc/fstab
-// 挂载
-mount -t nfs 192.168.2.26:/opt/nginx /opt/nginx2
 ```

@@ -11,6 +11,10 @@ module.exports = {
         link: '/guide/Shell'
       },
       {
+        text: '命令大全',
+        link: 'https://man.linuxde.net/'
+      },
+      {
         text: 'Github',
         link: 'https://github.com/one-pupil/fe-dev-command'
       }
