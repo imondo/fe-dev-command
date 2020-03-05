@@ -97,6 +97,60 @@ git reset --hard HEAD^
 
 但是 `reset` 的本质并不是删除了 commit，而是重新设置了 HEAD 和它指向的 branch。
 
+## 远程协作流程
+
+### 开源项目
+
+- fork dev 分支
+- 克隆代码
+```javascript
+git clone 你本地.git
+
+// 查看远程分支
+git remote -v
+
+// 添加远程分支别名
+git remote add devmaster 远程地址
+```
+
+- 修改本地代码第一次提交
+```javascript
+git add .
+git commit -m "feat: 提交"
+git push origin master
+```
+
+- 第二次修改前先更新代码
+```javascript
+git fetch devmaster
+git merge devmaster/dev
+```
+
+- 提交pr，请提交到主干**dev**分支上，提交请遵循基本规范
+```javascript
+<type>: 提交描述
+
+type
+
+fix：修复 xxx Bug
+feat：新增 xxx 功能
+test：调试 xxx 功能
+style：变更 xxx 代码格式或注释
+docs：变更 xxx 文档
+refactor：重构 xxx 功能或方法
+```
+
+<a name="5f739c16"></a>
+### 私有项目
+
+- 克隆开发的分支
+```javascript
+git clone -b 分支名称 分支地址
+```
+
+- 提交代码
+- 合并分支
+
 ## 清除历史敏感文件
 
 ```shell
@@ -122,4 +176,3 @@ npm config set registry http://registry.cnpmjs.org
 ```
 
 将`npm`代理重置。
-
