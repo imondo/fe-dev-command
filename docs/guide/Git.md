@@ -97,6 +97,17 @@ git reset --hard HEAD^
 
 但是 `reset` 的本质并不是删除了 commit，而是重新设置了 HEAD 和它指向的 branch。
 
+## 清除历史敏感文件
+
+```shell
+git filter-branch --force --index-filter "git rm --cached --ignore-unmatch 敏感文件路径" --prune-empty --tag-name-filter cat -- --all
+git push origin master --force
+rm -rf .git/refs/original/
+git reflog expire --expire=now --all
+git gc --prune=now
+git gc --aggressive --prune=now
+```
+
 ## 错误汇总
 
 * `npm install` 出现 `Unexpected end of JSON input while parsing near`的错误
