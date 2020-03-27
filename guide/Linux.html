@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux 命令 | fe-dev-command</title>
+    <meta name="description" content="前端开发实践中所知的SSH命令">
+    <link rel="icon" href="/fe-dev-command/favicon.ico">
+    
+    <link rel="preload" href="/fe-dev-command/assets/css/0.styles.ceabd204.css" as="style"><link rel="preload" href="/fe-dev-command/assets/js/app.73a096d1.js" as="script"><link rel="preload" href="/fe-dev-command/assets/js/2.b99ec777.js" as="script"><link rel="preload" href="/fe-dev-command/assets/js/7.f1ac8e8a.js" as="script"><link rel="prefetch" href="/fe-dev-command/assets/js/10.f4e5857f.js"><link rel="prefetch" href="/fe-dev-command/assets/js/11.8767fc12.js"><link rel="prefetch" href="/fe-dev-command/assets/js/12.313dfec9.js"><link rel="prefetch" href="/fe-dev-command/assets/js/3.b1c1ecc7.js"><link rel="prefetch" href="/fe-dev-command/assets/js/4.bb48645e.js"><link rel="prefetch" href="/fe-dev-command/assets/js/5.306ba245.js"><link rel="prefetch" href="/fe-dev-command/assets/js/6.0053921f.js"><link rel="prefetch" href="/fe-dev-command/assets/js/8.9fdb8d18.js"><link rel="prefetch" href="/fe-dev-command/assets/js/9.35c53916.js">
+    <link rel="stylesheet" href="/fe-dev-command/assets/css/0.styles.ceabd204.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fe-dev-command/" class="home-link router-link-active"><!----> <span class="site-name">fe-dev-command</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fe-dev-command/guide/Shell.html" class="nav-link">指南</a></div><div class="nav-item"><a href="https://man.linuxde.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  命令大全
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/one-pupil/fe-dev-command" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fe-dev-command/guide/Shell.html" class="nav-link">指南</a></div><div class="nav-item"><a href="https://man.linuxde.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  命令大全
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/one-pupil/fe-dev-command" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fe-dev-command/guide/Shell.html" class="sidebar-link">Shell</a></li><li><a href="/fe-dev-command/guide/Git.html" class="sidebar-link">Git</a></li><li><a href="/fe-dev-command/guide/Npm.html" class="sidebar-link">Npm</a></li><li><a href="/fe-dev-command/guide/PM2.html" class="sidebar-link">PM2</a></li><li><a href="/fe-dev-command/guide/Linux.html" class="active sidebar-link">Linux 命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#查找" class="sidebar-link">查找</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#程序是否运行" class="sidebar-link">程序是否运行</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#终止线程" class="sidebar-link">终止线程</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#当前工作目录" class="sidebar-link">当前工作目录</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#复制文件" class="sidebar-link">复制文件</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#创建目录" class="sidebar-link">创建目录</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#删除目录" class="sidebar-link">删除目录</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#移动文件" class="sidebar-link">移动文件</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#重命名" class="sidebar-link">重命名</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#切换用户" class="sidebar-link">切换用户</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#修改文件权限" class="sidebar-link">修改文件权限</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#压缩" class="sidebar-link">压缩</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#查看" class="sidebar-link">查看</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#文件下载" class="sidebar-link">文件下载</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#网络检测" class="sidebar-link">网络检测</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#用户" class="sidebar-link">用户</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#打印信息" class="sidebar-link">打印信息</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#java-常用命令" class="sidebar-link">java 常用命令</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#其它命令" class="sidebar-link">其它命令</a></li><li class="sidebar-sub-header"><a href="/fe-dev-command/guide/Linux.html#-2" class="sidebar-link"></a></li></ul></li><li><a href="/fe-dev-command/guide/nginx.html" class="sidebar-link">nginx 配置</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux-命令"><a href="#linux-命令" aria-hidden="true" class="header-anchor">#</a> Linux 命令</h1> <blockquote><p><a href="http://explainshell.com/" target="_blank" rel="noopener noreferrer">Linux命令学习<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <h2 id="查找"><a href="#查找" aria-hidden="true" class="header-anchor">#</a> 查找</h2> <div class="language-shell extra-class"><pre class="language-text"><code>find / -name filename.txt # 根据名称查找/目录下的filename.txt文件。
+
+find . -name &quot;*.xml&quot; # 递归查找所有的xml文件
+
+find . -name &quot;*.xml&quot; |xargs grep &quot;hello world&quot; # 递归查找所有文件内容中包含hello world的xml文件
+
+grep -H 'spring' *.xml # 查找所以有的包含spring的xml文件
+
+find ./ -size 0 | xargs rm -f &amp; # 删除文件大小为零的文件
+
+ls -l | grep '.jar' # 查找当前目录中的所有jar文件
+
+grep 'test' d* # 显示所有以d开头的文件中包含test的行。
+
+grep 'test' aa bb cc # 显示在aa，bb，cc文件中匹配test的行。
+
+grep '[a-z]\{5\}' aa # 显示所有包含每个字符串至少有5个连续小写字符的字符串的行。
+</code></pre></div><h2 id="程序是否运行"><a href="#程序是否运行" aria-hidden="true" class="header-anchor">#</a> 程序是否运行</h2> <div class="language-shell extra-class"><pre class="language-text"><code>ps -ef|grep tomcat # 查看所有有关tomcat的进程
+</code></pre></div><h2 id="终止线程"><a href="#终止线程" aria-hidden="true" class="header-anchor">#</a> 终止线程</h2> <div class="language-shell extra-class"><pre class="language-text"><code>kill -9 19979 # 终止线程号位19979的进程
+</code></pre></div><h2 id="当前工作目录"><a href="#当前工作目录" aria-hidden="true" class="header-anchor">#</a> 当前工作目录</h2> <div class="language-shell extra-class"><pre class="language-text"><code>pwd
+</code></pre></div><h2 id="复制文件"><a href="#复制文件" aria-hidden="true" class="header-anchor">#</a> 复制文件</h2> <div class="language-shell extra-class"><pre class="language-text"><code>cp source dest # 复制文件
+
+cp -r sourceFolder targetFolder # 递归复制整个文件夹
+
+scp sourecFile romoteUserName@remoteIp:remoteAddr # 远程拷贝
+</code></pre></div><h2 id="创建目录"><a href="#创建目录" aria-hidden="true" class="header-anchor">#</a> 创建目录</h2> <div class="language-shell extra-class"><pre class="language-text"><code>mkdir newfolder
+</code></pre></div><h2 id="删除目录"><a href="#删除目录" aria-hidden="true" class="header-anchor">#</a> 删除目录</h2> <div class="language-shell extra-class"><pre class="language-text"><code>rmdir deleteEmptyFolder # 删除空目录
+
+rm -rf deleteFile # 递归删除目录中所有内容
+</code></pre></div><h2 id="移动文件"><a href="#移动文件" aria-hidden="true" class="header-anchor">#</a> 移动文件</h2> <div class="language-shell extra-class"><pre class="language-text"><code>mv /temp/movefile /targetFolder
+</code></pre></div><h2 id="重命名"><a href="#重命名" aria-hidden="true" class="header-anchor">#</a> 重命名</h2> <div class="language-shell extra-class"><pre class="language-text"><code>mv oldNameFile newNameFile
+</code></pre></div><h2 id="切换用户"><a href="#切换用户" aria-hidden="true" class="header-anchor">#</a> 切换用户</h2> <div class="language-shell extra-class"><pre class="language-text"><code>su -username
+</code></pre></div><h2 id="修改文件权限"><a href="#修改文件权限" aria-hidden="true" class="header-anchor">#</a> 修改文件权限</h2> <div class="language-shell extra-class"><pre class="language-text"><code>chmod 777 file.java file.java # 的权限-rwxrwxrwx，r表示读、w表示写、x表示可执行
+</code></pre></div><h2 id="压缩"><a href="#压缩" aria-hidden="true" class="header-anchor">#</a> 压缩</h2> <h3 id="压缩文件"><a href="#压缩文件" aria-hidden="true" class="header-anchor">#</a> 压缩文件</h3> <div class="language-shell extra-class"><pre class="language-text"><code>tar -czf test.tar.gz /test1 /test2
+</code></pre></div><h3 id="列出压缩文件列表"><a href="#列出压缩文件列表" aria-hidden="true" class="header-anchor">#</a> 列出压缩文件列表</h3> <div class="language-shell extra-class"><pre class="language-text"><code>tar -tzf test.tar.gz
+</code></pre></div><h3 id="解压文件"><a href="#解压文件" aria-hidden="true" class="header-anchor">#</a> 解压文件</h3> <div class="language-shell extra-class"><pre class="language-text"><code>tar -xvzf test.tar.gz
+</code></pre></div><h2 id="查看"><a href="#查看" aria-hidden="true" class="header-anchor">#</a> 查看</h2> <h3 id="查看文件"><a href="#查看文件" aria-hidden="true" class="header-anchor">#</a> 查看文件</h3> <div class="language-shell extra-class"><pre class="language-text"><code>ls -al
+</code></pre></div><h3 id="查看文件头10行"><a href="#查看文件头10行" aria-hidden="true" class="header-anchor">#</a> 查看文件头10行</h3> <div class="language-shell extra-class"><pre class="language-text"><code>head -n 10 example.txt
+</code></pre></div><h3 id="查看文件尾10行"><a href="#查看文件尾10行" aria-hidden="true" class="header-anchor">#</a> 查看文件尾10行</h3> <div class="language-shell extra-class"><pre class="language-text"><code>tail -n 10 example.txt
+</code></pre></div><h3 id="查看日志类型文件"><a href="#查看日志类型文件" aria-hidden="true" class="header-anchor">#</a> 查看日志类型文件</h3> <div class="language-shell extra-class"><pre class="language-text"><code>tail -f exmaple.log # 这个命令会自动显示新增内容，屏幕只显示10行内容的（可设置）
+</code></pre></div><h3 id="查看端口占用情况"><a href="#查看端口占用情况" aria-hidden="true" class="header-anchor">#</a> 查看端口占用情况</h3> <div class="language-shell extra-class"><pre class="language-text"><code>netstat -tln | grep 8080 # 查看端口8080的使用情况
+</code></pre></div><h3 id="查看端口属于哪个程序"><a href="#查看端口属于哪个程序" aria-hidden="true" class="header-anchor">#</a> 查看端口属于哪个程序</h3> <div class="language-shell extra-class"><pre class="language-text"><code>lsof -i :8080
+</code></pre></div><h3 id="查看进程"><a href="#查看进程" aria-hidden="true" class="header-anchor">#</a> 查看进程</h3> <div class="language-shell extra-class"><pre class="language-text"><code>ps aux|grep java # 查看java进程
+
+ps aux # 查看所有进程
+</code></pre></div><h3 id="以树状图列出目录内容"><a href="#以树状图列出目录内容" aria-hidden="true" class="header-anchor">#</a> 以树状图列出目录内容</h3> <div class="language-shell extra-class"><pre class="language-text"><code>tree a
+</code></pre></div><h2 id="文件下载"><a href="#文件下载" aria-hidden="true" class="header-anchor">#</a> 文件下载</h2> <div class="language-shell extra-class"><pre class="language-text"><code>wget http://file.tgz
+
+curl http://file.tgz
+</code></pre></div><h2 id="网络检测"><a href="#网络检测" aria-hidden="true" class="header-anchor">#</a> 网络检测</h2> <div class="language-shell extra-class"><pre class="language-text"><code>ping www.just-ping.com
+</code></pre></div><h2 id="用户"><a href="#用户" aria-hidden="true" class="header-anchor">#</a> 用户</h2> <h3 id="远程登录"><a href="#远程登录" aria-hidden="true" class="header-anchor">#</a> 远程登录</h3> <div class="language-shell extra-class"><pre class="language-text"><code>ssh userName@ip
+</code></pre></div><h3 id="超级管理员身份执行"><a href="#超级管理员身份执行" aria-hidden="true" class="header-anchor">#</a> 超级管理员身份执行</h3> <div class="language-shell extra-class"><pre class="language-text"><code>sudo rm a.txt # 使用管理员身份删除文件
+</code></pre></div><h2 id="打印信息"><a href="#打印信息" aria-hidden="true" class="header-anchor">#</a> 打印信息</h2> <div class="language-shell extra-class"><pre class="language-text"><code>echo $JAVA_HOME # 打印java home环境变量的值
+</code></pre></div><h2 id="java-常用命令"><a href="#java-常用命令" aria-hidden="true" class="header-anchor">#</a> java 常用命令</h2> <div class="language-shell extra-class"><pre class="language-text"><code>java javac jps ,jstat ,jmap, jstack
+</code></pre></div><h2 id="其它命令"><a href="#其它命令" aria-hidden="true" class="header-anchor">#</a> 其它命令</h2> <div class="language-shell extra-class"><pre class="language-text"><code>svn git maven
+</code></pre></div><h3 id=""><a href="#" aria-hidden="true" class="header-anchor">#</a></h3> <h2 id="-2"><a href="#-2" aria-hidden="true" class="header-anchor">#</a></h2></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fe-dev-command/guide/PM2.html" class="prev">PM2</a></span> <span class="next"><a href="/fe-dev-command/guide/nginx.html">nginx 配置</a>→
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/fe-dev-command/assets/js/app.73a096d1.js" defer></script><script src="/fe-dev-command/assets/js/2.b99ec777.js" defer></script><script src="/fe-dev-command/assets/js/7.f1ac8e8a.js" defer></script>
+  </body>
+</html>
