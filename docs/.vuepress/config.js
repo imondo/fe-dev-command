@@ -27,7 +27,9 @@ module.exports = {
             'Shell',
             'Git',
             'Npm',
-            'PM2'
+            'PM2',
+            'Linux',
+            'nginx'
           ]
         }
       ]
