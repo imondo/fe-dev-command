@@ -15,7 +15,7 @@ module.exports = {
         link: 'https://man.linuxde.net/'
       },
       {
-        text: 'Github',
+        text: 'GitHub',
         link: 'https://github.com/one-pupil/fe-dev-command'
       }
     ],
