@@ -15,6 +15,10 @@ module.exports = {
         link: 'https://man.linuxde.net/'
       },
       {
+        text: '函数工具库',
+        link: 'https://one-pupil.github.io/js-utils/'
+      },
+      {
         text: 'GitHub',
         link: 'https://github.com/one-pupil/fe-dev-command'
       }
