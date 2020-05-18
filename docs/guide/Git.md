@@ -31,6 +31,12 @@ git commit -m "第一次提交"
 git push origin master
 ```
 
+## 本地关联远程仓库
+
+```
+git remote add origin 仓库链接
+```
+
 
 ## Rebase 合并
 
