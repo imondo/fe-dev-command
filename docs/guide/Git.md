@@ -79,7 +79,16 @@ git checkout dev
 # git checkout 命令加上 -b 参数表示创建并切换
 git checkout -b dev
 ```
-<a name="QAYOW"></a>
+
+## 删除分支
+
+```shell
+ # 删除本地分支
+ git branch -d release_20200709_v2.1
+ # 删除远程分支
+ git push origin --delete release_20200709_v2.1
+```
+
 ## Rebase 合并
 
 <br />该命令可以让和 `merge` 命令得到的结果基本是一致的。<br />
@@ -131,15 +140,43 @@ git checkout -b new
 <br />PS：`reflog` 记录是时效的，只会保存一段时间内的记录。<br />
 
 <a name="Reset"></a>
-## Reset
-
-<br />如果你想删除刚写的 commit，就可以通过以下命令实现<br />
-
+## 撤销 commit
 ```shell
-git reset --hard HEAD^
+git reset --soft HEAD^
+
+# 仅仅撤销提交记录，代码仍然存在
+# HEAD^的意思是上一个版本，也可以写成HEAD~1
+# 如果进行了2次commit，想都撤回，可以使用HEAD~2
+```
+**参数**：
+
+- **--mixed**： 不删除工作空间改动代码，撤销 `commit`，并且撤销 `git add .`
+- **--soft**：不删除工作空间改动代码，撤销 `commit`，不撤销 `git add .` 
+- **--hard**：删除工作空间改动代码，撤销 `commit`，撤销 `git add .` 注意完成这个操作后，就恢复到了上一次的 `commit` 状态。
+- 如果 `commit `注释写错了，只是想改一下注释，只需执行命令；此时会进入默认编辑器，修改注释完毕后保存
+```shell
+git commit --amend
 ```
 
-<br />但是 `reset` 的本质并不是删除了 commit，而是重新设置了 HEAD 和它指向的 branch。<br />
+## 推送不同的远程仓库
+```shell
+# 首先将本地仓库（已经关联过github远程仓库）再次关联远程仓库
+git remote add mygit https://gitee.com/modno/answer-emigrated.git
+# 关联好了就想要 push
+git push mygit master
+# 强制推送
+git push -f mygit master
+```
+<a name="0Q0aC"></a>
+## 更新远程分支索引
+```shell
+git fetch
+```
+
+## git 凭证
+```shell
+git config --global credential.helper wincred
+```
 
 <a name="nSNF2"></a>
 ## 远程协作流程
