@@ -139,6 +139,26 @@ git checkout -b new
 
 <br />PS：`reflog` 记录是时效的，只会保存一段时间内的记录。<br />
 
+> git时光机问题
+
+```shell
+git reflog
+```
+会展示出所有你之前 git 操作，你以前所有的操作都被 git 记录了下来
+
+这时候要记好 `hash` 值：`4c97ff3` 和 `cd52afc`，他们分别是 `feature-7` 和 `feature-6` 的hash码。然后执行回滚，回到 `feature-6` 上
+
+```shell
+git reset --hard cd52afc
+```
+好的，我们回到了 `feature-6` 上，但是 `feature-7` 没了，如何加上来呢？这个时候就用上了 `git cherry-pick`，刚刚我们知道了 `feature-7` 的 `hash` 码为 `4c97ff3`，操作如下
+
+```shell
+git cherry-pick 4c97ff3
+```
+
+输入好了以后，你的 `feature-7` 的代码就回来了。期间可能会有一些冲突，按照提示解决就好
+
 <a name="Reset"></a>
 ## 撤销 commit
 ```shell
